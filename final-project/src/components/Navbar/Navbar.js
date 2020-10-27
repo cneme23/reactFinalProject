@@ -2,7 +2,7 @@ import React from 'react';
 
 import * as ReactBootStrap from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import CartWidget from "./CartWidget"
 function Navbar() {
   return (
     <div className="App">
@@ -36,6 +36,7 @@ function Navbar() {
     </ReactBootStrap.NavDropdown>
     </ReactBootStrap.Nav>
     <ReactBootStrap.Nav>
+      <CartWidget/>
       <ReactBootStrap.Nav.Link href="#deets">Crear cuenta</ReactBootStrap.Nav.Link>
       <ReactBootStrap.Nav.Link eventKey={2} href="#memes">
         iniciar Sesión
