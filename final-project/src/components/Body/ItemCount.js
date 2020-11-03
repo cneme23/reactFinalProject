@@ -10,18 +10,23 @@ class Contador extends Component{
         //Este seria el estado en si. Es un objeto literal que tendra incluido en el todas las propiedades.
         this.state={
 
-            numero:props.inicial
+            numero:props.initial,
         }
 
     }
 
     aumentarValor(){
+        console.log(this.state.numero, this.props.stock)
+        if(this.state.numero < this.props.stock){
         this.setState({numero: this.state.numero+1})
+        }
     }
 
     decrementar(){
+        if(this.state.numero > 0){
         this.setState({numero: this.state.numero-1})
     }
+}
 
 render(){
     
@@ -31,9 +36,10 @@ render(){
         <div>
             
             <p> cantidad de productos {this.state.numero}</p>
-            <button onClick =  {() => this.aumentarValor()}> aumentar</button>
+            <p>Stock {this.state.numero} </p>
             <button onClick= { () => this.decrementar()}> Decrementar</button>
-
+            <button onClick =  {() => this.aumentarValor()}> Aumentar</button>
+            <button onClick= { () => this.props.onAdd(this.state.numero)}> Agregar al carrito</button>
         </div>
     )
 
