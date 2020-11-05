@@ -15,7 +15,7 @@ class App extends Component {
     const promise = new Promise((resolve, reject) => {
       return setTimeout(() => {
         const productos = [
-            { titulo: "Habanos", precio: "$100", foto: "/img/cohiba_esplendidos.jpg" },
+            { titulo: "Habanos", precio: "$200", foto: "/img/cohiba_esplendidos.jpg" },
             { titulo: "Habanos", precio: "$100", foto: "/img/cohiba_esplendidos.jpg" },
             { titulo: "Habanos", precio: "$100", foto: "/img/cohiba_esplendidos.jpg" },
             {titulo:"Cigarros", precio: "$500", foto:"/img/vegafina_robusto.jpg"},
